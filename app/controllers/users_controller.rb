@@ -26,9 +26,8 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
-  def  created
+  def create
     @user = User.new(user_params)
-
       respond_to do |format|
       if @user.save 
         format.html { redirect_to @user, notice: '登録されました' }
