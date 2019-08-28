@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+
+  skip_before_action :require_login
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+
   # GET /users
   # GET /users.json
   def index
@@ -20,8 +24,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-  
-  
+
   end
 
   # POST /users
@@ -43,11 +46,13 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
+
       
       if params[:user][:password].blank?
         params[:user].delete("password")
       end
       
+
       if @user.update(user_params)
         format.html { redirect_to @user, notice: '保存されました' }
         format.json { render :show, status: :ok, location: @user }
