@@ -7,13 +7,13 @@
     <%= f.label :name_cont, "氏名を検索" %>
     <%= f.text_field :name_cont, class: "form-control" %>
   </div>
-  <div class="actions"><%= f.submit "検索" %></div>
-
-
-  <%= f.label :権限 %>
+　<%= f.label :権限 %>
   　<%= f.radio_button :admin_eq, '', {:checked => true} %>指定なし
     <%= f.radio_button :admin_eq, true %>あり
     <%= f.radio_button :admin_eq, false %>なし
+    
+  <div class="actions"><%= f.submit "検索" %></div>
+
 
     
 
@@ -45,3 +45,4 @@
 <br>
 
 <%= link_to '新規ユーザ登録', new_user_path %>
+

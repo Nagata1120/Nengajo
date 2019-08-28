@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
   # GET /users
   # GET /users.json
   def index
@@ -21,17 +20,16 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+  
+  
   end
 
   # POST /users
   # POST /users.json
-  def create
+  def  created
     @user = User.new(user_params)
 
-    
-
-
-    respond_to do |format|
+      respond_to do |format|
       if @user.save 
         format.html { redirect_to @user, notice: '登録されました' }
         format.json { render :show, status: :created, location: @user }
@@ -46,6 +44,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
+      
+      if params[:user][:password].blank?
+        params[:user].delete("password")
+      end
+      
       if @user.update(user_params)
         format.html { redirect_to @user, notice: '保存されました' }
         format.json { render :show, status: :ok, location: @user }
