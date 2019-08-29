@@ -7,6 +7,7 @@
     <%= f.label :name_cont, "氏名を検索" %>
     <%= f.text_field :name_cont, class: "form-control" %>
   </div>
+
 　<%= f.label :権限 %>
   　<%= f.radio_button :admin_eq, '', {:checked => true} %>指定なし
     <%= f.radio_button :admin_eq, true %>あり
@@ -14,7 +15,18 @@
     
   <div class="actions"><%= f.submit "検索" %></div>
 
+<<<<<<< HEAD
  <% end %>
+=======
+
+
+    
+
+
+
+
+  <% end %>
+>>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8
 
 <table>
   <thead>
@@ -39,8 +51,11 @@
 <br>
 
 <%= link_to '新規ユーザ登録', new_user_path %>
+<<<<<<< HEAD
 <%= link_to 'ログアウト', "/login" %>
 <%= link_to 'メニューへ戻る', :back %> 
 <%# :backで前のページに戻るリンクが自動作成される %>
 
 
+=======
+>>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8

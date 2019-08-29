@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>メニュー</h1>
+<<<<<<< HEAD
 <h2>ようこそ<%= @user.name %>さん</h2>
+=======
+>>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8
   <%= link_to '送付先管理', "/recipients" %>
   <% @user = User.find(params[:id])%>
 
@@ -9,4 +12,7 @@
   <%= link_to 'ユーザ管理', "/users" if @user.admin  === true %>  
 
   <%= link_to 'ログアウト', "/login" %>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8
