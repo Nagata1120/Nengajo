@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-=======
-
->>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8
   skip_before_action :require_login
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -27,10 +23,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-<<<<<<< HEAD
-=======
 
->>>>>>> 015d78598c0196db9460b1ada077d8efe4066dd8
   end
 
   # POST /users
