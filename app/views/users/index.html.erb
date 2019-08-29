@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+﻿<p id="notice"><%= notice %></p>
 
 <h1>ユーザ一覧</h1>
 
@@ -14,13 +14,7 @@
     
   <div class="actions"><%= f.submit "検索" %></div>
 
-
-    
-
-
-
-
-  <% end %>
+ <% end %>
 
 <table>
   <thead>
@@ -40,9 +34,13 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> 
 
 <br>
 
 <%= link_to '新規ユーザ登録', new_user_path %>
+<%= link_to 'ログアウト', "/login" %>
+<%= link_to 'メニューへ戻る', :back %> 
+<%# :backで前のページに戻るリンクが自動作成される %>
+
 
